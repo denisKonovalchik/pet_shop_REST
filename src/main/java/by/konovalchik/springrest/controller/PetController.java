@@ -45,7 +45,7 @@ public class PetController {
 
 
     @Transactional(readOnly = true)
-    @PostMapping("/findByStatus/{status}")
+    @GetMapping("/findByStatus/{status}")
     public ResponseEntity<List <Pet>> findByStatus(@Valid @PathVariable String status){
        PetStatus statusOpt = PetStatus.getEnum(status);
         Optional<List<Pet>> pets = petService.getPetByStatus(statusOpt);

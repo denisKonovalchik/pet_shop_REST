@@ -30,7 +30,7 @@ public class UserAspect {
     @AfterReturning(value = "saveUserAspect(user)", returning = "flag", argNames = "flag,user")
     public void saveUserCreate(Boolean flag, User user){
         if(flag) {
-            logger.info("User {} signed in!", user.getUsername());
+            logger.info("Registered new user {} !", user.getUsername());
         }
     }
 
@@ -60,8 +60,6 @@ public class UserAspect {
         }
 
     }
-
-
 
 
 

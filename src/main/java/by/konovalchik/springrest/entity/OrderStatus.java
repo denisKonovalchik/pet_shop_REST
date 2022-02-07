@@ -15,12 +15,5 @@ public enum OrderStatus {
         this.value = value;
     }
 
-    public static PetStatus getEnum(String value){
-        for(PetStatus status: PetStatus.values()){
-            if(status.getValue().equals(value)){
-                return status;
-            }
-        }
-        return  null;
-    }
+
 }
